@@ -21,9 +21,9 @@
 extern "C" {
 #endif
 
-void Mock_hw_interface_Init(void);
-void Mock_hw_interface_Destroy(void);
-void Mock_hw_interface_Verify(void);
+void mock_hw_interface_Init(void);
+void mock_hw_interface_Destroy(void);
+void mock_hw_interface_Verify(void);
 
 
 

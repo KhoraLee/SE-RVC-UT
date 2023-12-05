@@ -3,7 +3,7 @@
 #include <stdlib.h>
 #include <setjmp.h>
 #include "cmock.h"
-#include "Mock_hw_interface.h"
+#include "mock_hw_interface.h"
 
 static const char* CMockString_cleaner = "cleaner";
 static const char* CMockString_cleaner_power_up = "cleaner_power_up";
@@ -85,7 +85,7 @@ typedef struct _CMOCK_cleaner_power_up_CALL_INSTANCE
 
 } CMOCK_cleaner_power_up_CALL_INSTANCE;
 
-static struct Mock_hw_interfaceInstance
+static struct mock_hw_interfaceInstance
 {
   CMOCK_MEM_INDEX_TYPE front_sensor_status_CallInstance;
   CMOCK_MEM_INDEX_TYPE left_sensor_status_CallInstance;
@@ -101,7 +101,7 @@ static struct Mock_hw_interfaceInstance
 
 extern jmp_buf AbortFrame;
 
-void Mock_hw_interface_Verify(void)
+void mock_hw_interface_Verify(void)
 {
   UNITY_LINE_TYPE cmock_line = TEST_LINE_NUM;
   CMOCK_MEM_INDEX_TYPE call_instance;
@@ -167,12 +167,12 @@ void Mock_hw_interface_Verify(void)
   }
 }
 
-void Mock_hw_interface_Init(void)
+void mock_hw_interface_Init(void)
 {
-  Mock_hw_interface_Destroy();
+  mock_hw_interface_Destroy();
 }
 
-void Mock_hw_interface_Destroy(void)
+void mock_hw_interface_Destroy(void)
 {
   CMock_Guts_MemFreeAll();
   memset(&Mock, 0, sizeof(Mock));

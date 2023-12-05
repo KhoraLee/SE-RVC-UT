@@ -1,7 +1,5 @@
-#pragma once
-
 #ifndef _rvc_h
-#define _rvc_h
+#define _rvc_h 
 
 typedef enum _dir {
     FORWARD,
@@ -9,9 +7,10 @@ typedef enum _dir {
 } Direction;
 
 typedef enum _location {
-    Front = 0b0001,
-    Left = 0b0010,
-    Right = 0b0100,
+    NONE = 0b0000,
+    FRONT = 0b0001,
+    LEFT = 0b0010,
+    RIGHT = 0b0100,
 } Location;
 
 

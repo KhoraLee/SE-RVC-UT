@@ -13,5 +13,5 @@ void turn_left() { }
 void turn_right() { }
 
 // Cleaner
-void cleaner(CleanerCommand command) { } // Cleaner 의 상태를 변경
-void cleaner_power_up() { } // power-up the cleaner for 5 ticks
+void cleaner(CleanerCommand command) { }
+void cleaner_power_up() { }
